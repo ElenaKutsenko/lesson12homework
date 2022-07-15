@@ -1,80 +1,25 @@
-public class App {
+public class Main{
 
-    public App(int lifetime) throws InterruptedException {
-        A a = new A();
-        T1 t1 = new T1(a);
-        T2 t2 = new T2(a, "Test!");
-        t1.start();
-        t2.start();
-        Thread.sleep(lifetime * 1000+100);
-        t1.interrupt();
-        t2.interrupt();
-    }
+    public static void main(String[] args) throws InterruptedException, Exception {
 
-    public static void main(String[] args) throws InterruptedException {
-        new App(15);
-    }
+        TimeCount timeCount = new TimeCount();
 
-    class T1 extends Thread {
+        ThreadOne thread1 = new ThreadOne(timeCount);
+        thread1.run();
 
-        private A app;
+        ThreadTwo thread2 = new ThreadTwo (timeCount);
+        thread2.run();
 
-        public T1(A app) {
-            this.app = app;
-        }
+        ThreadThree thread3 = new ThreadThree (timeCount);
+        thread3.run();
 
-        public void run() {
-            while (!Thread.currentThread().isInterrupted()) {
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException ex) {
-                    Thread.currentThread().interrupt();
-                }
-                this.app.add();
-            }
-        }
-    }
 
-    class T2 extends Thread {
+    }}
 
-        private A app;
-        private String message;
 
-        public T2(A app, String message) {
-            this.app = app;
-            this.message = message;
-        }
 
-        public void run() {
-            while (!Thread.currentThread().isInterrupted()) {
-                int n;
-                try {
-                    n = app.last();
-                    System.out.println(n);
-                    // это можно вынести в отдельный поток
-                    if (n % 5 == 0)
-                        System.out.println(message);
-                    /*if (n % 7 == 0)
-                        System.out.println(message);*/
-                } catch (InterruptedException ex) {
-                    Thread.currentThread().interrupt();
-                }
-            }
-        }
-    }
 
-    class A {
 
-        private int d = 0;
 
-        public synchronized void add() {
-            this.d++;
-            notify();
-        }
 
-        public synchronized int last() throws InterruptedException {
-            wait();
-            return this.d;
-        }
-    }
-}
+
