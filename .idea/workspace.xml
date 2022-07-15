@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5726f030-b318-49fd-89af-92f2653faff9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson12homework.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ThreadOne.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ThreadThree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ThreadTwo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TimeCount.java" afterDir="false" />
-    </list>
+    <list default="true" id="5726f030-b318-49fd-89af-92f2653faff9" name="Changes" comment="Вопрос по домашнему заданию" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,8 +67,16 @@
       <workItem from="1657626020556" duration="3917000" />
       <workItem from="1657713522655" duration="5511000" />
       <workItem from="1657735843784" duration="5782000" />
-      <workItem from="1657894054221" duration="19711000" />
+      <workItem from="1657894054221" duration="20075000" />
     </task>
+    <task id="LOCAL-00001" summary="Вопрос по домашнему заданию">
+      <created>1657919534771</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1657919534771</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,5 +92,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Вопрос по домашнему заданию" />
+    <option name="LAST_COMMIT_MESSAGE" value="Вопрос по домашнему заданию" />
   </component>
 </project>
