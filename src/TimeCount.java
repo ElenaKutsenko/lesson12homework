@@ -1,25 +1,16 @@
 public class TimeCount {
 
-    private int i;
-    public synchronized void start() throws InterruptedException {
-        while (i % 5 == 0 && i % 7 == 0) {
-            wait();
-        }
-        notifyAll();
+    private int i = 0;
+
+    public synchronized void add() {
+        this.i++;
+        notify();
     }
 
-    public synchronized void stop5sec() throws InterruptedException {
-        while (i % 5 != 0) {
-            wait();
-        }
-        notifyAll();
+    public synchronized int last() throws InterruptedException {
+        wait();
+        return this.i;
     }
 
-    public void stop7sec() throws InterruptedException {
-        while (i % 7 != 0) {
-            wait();
-        }
-        notifyAll();
-    }
 }
 

@@ -1,21 +1,22 @@
-class ThreadOne implements Runnable {
+class ThreadOne extends Thread {
     TimeCount timeCount;
 
-    public ThreadOne (TimeCount timeCount) {
+    public ThreadOne(TimeCount timeCount) {
         this.timeCount = timeCount;
     }
+
     int i;
+
     @Override
     public void run() {
-            for (int i = 1; i < 1000; i++) {
-                try {
-                    Thread.sleep(1000L);
-                    timeCount.start();
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
-                System.out.println(i);
+        while (!Thread.currentThread().isInterrupted()) {
+            try {
+                Thread.sleep(1000L);
+            } catch (InterruptedException ex) {
+               Thread.currentThread().interrupted();
             }
+                this.timeCount.add();
+        }
     }
 }
 
